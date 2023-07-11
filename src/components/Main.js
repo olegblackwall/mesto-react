@@ -2,7 +2,7 @@ import { api } from "../utils/Api.js";
 import Card from "./Card.js";
 import { useState, useEffect } from "react";
 
-function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick}) {
+function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
 
   const [userName, setUserName] = useState("");
   const [userDescription, setUserDescription] = useState("");
@@ -46,12 +46,15 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick}) {
       </section>
 
       <div class="elements">
-        {cards.map((item) => { return (
-          <Card 
-          card={item}
-          handleCardClick={onCardClick}
-          />
-        )})}
+        {cards.map((item) => {
+          return (
+            <Card
+              key={item._id}
+              card={item}
+              handleCardClick={onCardClick}
+            />
+          )
+        })}
       </div>
     </main>
   );

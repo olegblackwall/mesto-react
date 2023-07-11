@@ -6,7 +6,7 @@ function Card({card, handleCardClick}) {
 
     return (
         <article className="element">
-            <img src={card.link} className="element__img" alt="picture" onClick={handleClick}/>
+            <img src={card.link} className="element__img" alt={card.name} onClick={handleClick}/>
             <div className="element__info">
                 <h2 className="element__title">{card.name}</h2>
                 <div className="element__container-like">
