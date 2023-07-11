@@ -29,23 +29,23 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
   }, []);
 
   return (
-    <main class="content">
-      <section class="profile">
+    <main className="content">
+      <section className="profile">
 
-        <div class="profile__user-info">
-          <button type="button" class="profile__avatar-button" onClick={onEditAvatar}>
-            <img src={userAvatar} class="profile__avatar" alt="Аватар" />
+        <div className="profile__user-info">
+          <button type="button" className="profile__avatar-button" onClick={onEditAvatar}>
+            <img src={userAvatar} className="profile__avatar" alt="Аватар" />
           </button>
-          <div class="profile__info">
-            <h1 class="profile__name">{userName}</h1>
-            <button type="button" class="profile__edit-button" onClick={onEditProfile}></button>
-            <h2 class="profile__about">{userDescription}</h2>
+          <div className="profile__info">
+            <h1 className="profile__name">{userName}</h1>
+            <button type="button" className="profile__edit-button" onClick={onEditProfile}></button>
+            <h2 className="profile__about">{userDescription}</h2>
           </div>
         </div>
-        <button type="button" class="profile__add-button" onClick={onAddPlace}></button>
+        <button type="button" className="profile__add-button" onClick={onAddPlace}></button>
       </section>
 
-      <div class="elements">
+      <div className="elements">
         {cards.map((item) => {
           return (
             <Card
