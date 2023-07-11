@@ -1,0 +1,24 @@
+.popup__close-button {
+    background-image: url("./../../../images/cross-close.svg");
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: -39px;
+    right: -39px;
+}
+
+.popup__close-button:hover {
+    opacity: .6;
+}
+
+@media screen and (max-width: 879px) {
+    .popup__close-button {
+        background-image: url("./../../../images/cross-close-mobile.svg");
+        background-repeat: no-repeat;
+        top: -35px;
+        right: -12px;
+    }
+}

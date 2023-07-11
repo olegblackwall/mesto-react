@@ -1,0 +1,9 @@
+.element__container-like {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    right: 20px;
+    bottom: 22px;
+    align-items: center;
+    color: black;
+  }

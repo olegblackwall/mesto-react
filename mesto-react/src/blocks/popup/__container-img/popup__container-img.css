@@ -1,0 +1,9 @@
+.popup__container-img {
+    position: absolute;
+}
+
+@media screen and (max-width: 879px) {
+    .popup__container-img {
+        margin: 0 40px;
+    }
+}
