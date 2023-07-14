@@ -103,10 +103,6 @@ function App() {
       .then((result) => {
         setCards([result, ...cards]);
         closeAllPopups();
-        // 
-        console.log([result, ...cards])
-        console.log([result, cards])
-        // 
       })
   }
 
