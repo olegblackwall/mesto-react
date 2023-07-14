@@ -80,6 +80,9 @@ function App() {
         })
         setCards(filteredCards);
       })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function handleUpdateUser(userInfo) {
@@ -88,6 +91,9 @@ function App() {
         setCurrentUser(result);
         closeAllPopups();
       })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function handleUpdateAvatar(userAvatar) {
@@ -96,6 +102,9 @@ function App() {
         setCurrentUser(result);
         closeAllPopups();
       })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   function handleAddPlaceSubmit(newCard) {
@@ -104,6 +113,9 @@ function App() {
         setCards([result, ...cards]);
         closeAllPopups();
       })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
 
@@ -180,9 +192,7 @@ function App() {
           onAddPlace={handleAddPlaceSubmit}
         />
 
-        <PopupWithForm title={"Вы уверены?"} name={"_save-button"}>
-          {<button className="popup__save-button" type="button">Да</button>}
-        </PopupWithForm>
+        <PopupWithForm title={"Вы уверены?"} name={"_save-button"} />
 
         <ImagePopup
           card={selectedCard}

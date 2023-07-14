@@ -1,10 +1,17 @@
 import PopupWithForm from "./PopupWithForm"
-import { useState, useRef } from "react"
+import { useState, useEffect } from "react"
 
 function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
 
     const [name, setName] = useState("");
     const [link, setLink] = useState("");
+
+    useEffect(() => {
+        if (isOpen) {
+          setName("");
+          setLink("");
+        }
+      }, [isOpen]);
 
     function handleCardName(evt) {
         setName(evt.target.value)
@@ -20,10 +27,6 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
             name,
             link
         });
-        setTimeout(() => {
-            setName("");
-            setLink("");
-        }, 1000)
     }
 
     return (
