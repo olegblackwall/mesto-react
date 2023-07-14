@@ -1,4 +1,4 @@
-function PopupWithForm({ children, title, name, isOpen, onClose }) {
+function PopupWithForm({ children, title, name, isOpen, onClose, onSubmit }) {
 
   function closePopupOnOverlayClick (evt) {
     if (evt.target == evt.currentTarget) {
@@ -10,7 +10,7 @@ function PopupWithForm({ children, title, name, isOpen, onClose }) {
       <section className={`popup popup_${name} ${isOpen && "popup_opened"}`} onClick={closePopupOnOverlayClick}>
         <div className="popup__container">
           <h2 className="popup__title">{title}</h2>
-          <form className="popup__form" name={name} action="#" noValidate>
+          <form className="popup__form" name={name} action="#" noValidate onSubmit={onSubmit}>
             {children}
             <button type="submit" className="popup__save-button">Сохранить</button>
           </form>
