@@ -3,7 +3,9 @@
     max-width: 880px;
     height: 74px;
     margin: 0 auto 0;
+    padding-top: 45px;
     border-bottom: 1px solid rgba(84, 84, 84, .7);
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 879px){
@@ -18,5 +20,6 @@
 @media screen and (max-width: 618px) {
     .header {
         width: 320px;
+        padding-top: 28px;
     }
 }

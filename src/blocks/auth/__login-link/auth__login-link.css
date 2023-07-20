@@ -1,0 +1,23 @@
+.auth__login-link {
+    display: block;
+    margin: 15px 0 0 0;
+    width: 100%;
+    font-size: 14px;
+    line-height: 17px;
+    background-color: inherit;
+    border: none;
+    color: white;
+    text-align: center;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+@media screen and (min-width: 992px) {
+    .auth-form__link {
+        padding-top: 15px;
+    }
+}
+
+.auth__login-link:hover {
+    opacity: .6;
+}

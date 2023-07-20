@@ -1,0 +1,15 @@
+.header__link {
+    display: block;
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    text-decoration: none;
+    opacity: 1;
+    padding-top: 6px;
+    transition: opacity .3s ease-in-out;
+}
+
+.header__link:hover {
+    opacity: .6;
+  }
